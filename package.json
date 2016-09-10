@@ -4,7 +4,8 @@
   "description": "web app to help connect people to watch scary movies in theatres",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot"
   },
   "repository": "git@github.com:Clothiersphere/frightFriends.git",
   "keywords": [
@@ -25,17 +26,24 @@
   "dependencies": {
     "axios": "^0.14.0",
     "express": "^4.14.0",
+    "promise": "^7.1.1",
     "react": "^15.3.1",
     "react-addons-update": "^15.3.1",
     "react-bootstrap": "^0.30.3",
     "react-dom": "^15.3.1",
+    "react-logger": "^1.1.0",
+    "react-promise": "^1.1.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.7.0",
     "redux": "^3.6.0",
+    "redux-form": "^6.0.2",
+    "redux-logger": "^2.6.1",
+    "redux-promise": "^0.5.3",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
