@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "make test",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot",
+    "lint": "eslint src"
   },
   "repository": "git@github.com:Clothiersphere/frightFriends.git",
   "keywords": [
