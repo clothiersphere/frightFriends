@@ -6,7 +6,8 @@
   "scripts": {
     "test": "make test",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "reset": "psql -f freshdb.sql && nodemon server.js"
   },
   "repository": "git@github.com:Clothiersphere/frightFriends.git",
   "keywords": [
@@ -26,7 +27,9 @@
   "homepage": "https://github.com/clothiersphere/frightFriends#readme",
   "dependencies": {
     "axios": "^0.14.0",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "pg-promise": "^5.3.3",
     "promise": "^7.1.1",
     "react": "^15.3.1",
     "react-addons-update": "^15.3.1",

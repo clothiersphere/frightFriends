@@ -26,9 +26,9 @@ module.exports = {
     },
   },
   devServer: {
-    // proxy: {
-    //   '/api/**': 'http://localhost:1234',
-    // },
+    proxy: {
+      '/api/**': 'http://localhost:1234',
+    },
     historyApiFallback: true,
     contentBase: './public',
     hot: true,

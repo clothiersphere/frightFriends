@@ -1,13 +1,22 @@
-let express = require('express');
-let path = require('path');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
 
-let port = process.env.PORT || 3000;
-let app = express();
+const db = require('./server/db');
 
-app.get('/', function (req, res ) {
+
+const port = process.env.PORT || 1234;
+const app = express();
+
+
+app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
   res.send('Hi');
 });
 
-app.listen(port, function () {
-  console.log('Server running on port: ' + port)
+app.post('/api/users', db.createUser);
+
+app.listen(port, () => {
+  console.log('Server running on port: ' + port);
 });
