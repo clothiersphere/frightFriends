@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.send('Hi');
 });
 
-app.post('/api/users', db.createUser);
+app.post('/api/users', db.checkUser);
 
 app.listen(port, () => {
   console.log('Server running on port: ' + port);

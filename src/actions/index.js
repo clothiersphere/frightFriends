@@ -10,7 +10,6 @@ function payload(type, request) {
 }
 
 export function submitUserInfo(data) {
-  console.log("data", data)
   const request = axios({
     method: 'POST',
     url: 'http://localhost:8080/api/users',
@@ -18,9 +17,14 @@ export function submitUserInfo(data) {
   });
 
   return request
-    .then((response) => {
-      console.log(response);
-      return payload(SUBMIT_USER_INFO, response.data);
+    .then(response => {
+      payload(SUBMIT_USER_INFO, response.data);
+    })
+    .catch(error => {
+      if (error.response) {
+        console.log(error.response.status);
+        //update view with error message - email in use
+      }
     });
 }
 
